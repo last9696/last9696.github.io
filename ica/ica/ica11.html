@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="ica11.css">
 </head>
 <body>
     <div>
@@ -35,9 +36,9 @@ function randomValueFromArray(array) {
 }
 
 // Raw text strings
-const characters = ["Willy the Goblin", "Big Daddy", "Father Christmas"];
-const places = ["the soup kitchen", "Disneyland", "the White House"];
-const events = ["spontaneously combusted", "melted into a puddle on the sidewalk", "turned into a slug and slithered away"];
+const characters = ["Lightning Mcqueen", "Mater", "Sally"];
+const places = ["Radiator Springs", "Cozy Cone", "V8 Cafe"];
+const events = [" they blow up", " they become an instructor", "turned into a villian"];
 
 // Willy the Goblin
 // Big Daddy
@@ -54,13 +55,14 @@ const events = ["spontaneously combusted", "melted into a puddle on the sidewalk
 // Partial return random string function
 
 function returnRandomStoryString() {
-  // It was 94 Fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.
-let storyText = `It was 94 Fahrenheit outside, so ${randomCharacter} went for a walk. When they got to ${randomPlace}, they stared in horror for a few moments, then ${randomEvent}. Bob saw the whole thing, but was not surprised — ${randomCharacter} weighs 300 pounds, and it was a hot day.`;
-  return storyText;
-}
+
 const randomCharacter = randomValueFromArray(characters);
 const randomPlace = randomValueFromArray(places);
 const randomEvent = randomValueFromArray(events);
+  // It was 94 Fahrenheit outside, so :insertx: went for a walk. When they got to :inserty:, they stared in horror for a few moments, then :insertz:. Bob saw the whole thing, but was not surprised — :insertx: weighs 300 pounds, and it was a hot day.
+let storyText = `It was a rainy, sad, depressing day, so ${randomCharacter} went for a drive on Route 66. When they got to ${randomPlace}, they stared in awe for a few moments, then ${randomEvent}. Bob saw the whole thing, but was not phased— ${randomCharacter} thinks they weigh 300 pounds, and they were sad anyways.`;
+return storyText;
+}
 // Event listener and partial generate function definition
 
 
@@ -87,6 +89,8 @@ console.log(newStory);
   story.textContent = newStory;
   story.style.visibility = "visible";
 }
+
 </script>
 </body>
 </html>
+<img src="images.jpeg" alt="lightningmcqueenimage" class="lightning">
